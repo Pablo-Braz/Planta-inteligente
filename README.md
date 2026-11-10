@@ -23,31 +23,19 @@ A ideia central é criar um irrigador inteligente que:
 
 | Componente | Função |
 |---|---|
-| Arduino Uno / Nano | Controla o sistema e processa os sensores |
+| Arduino Uno / Nano | Controla o sistema e processa os dados do sensor |
 | Sensor de umidade do solo | Mede a umidade da terra do vaso |
 | Módulo relé 5V | Liga e desliga a bomba de água |
-| Bomba de água | Irriga a planta automaticamente |
+| Bomba de água | Irriga a planta quando necessário |
 | Display LCD 16x2 | Mostra a umidade atual e o estado do sistema |
-| LEDs | Indicador visual do nível da planta |
+| LEDs | Indicam visualmente o nível de irrigação |
 | Caixa de pilhas / fonte | Alimenta o circuito de forma portátil |
 | Fios e jumpers | Conexões entre os módulos |
 | Protoboard | Montagem e organização do circuito |
 
-### Função de cada componente
-
-- Arduino: cérebro do sistema
-- Sensor de umidade: detecta a condição do solo
-- Relé: atua como chave para a bomba
-- Bomba: fornece água para irrigar a planta
-- LCD: mostra o valor da leitura em tempo real
-- LEDs: sinal visual para estados de secura, atenção e normal
-- Caixa de pilhas: fornece energia ao sistema de forma simples e compacta
-
 ---
 
 ## 🔌 Conexões principais
-
-Abaixo está a referência de ligação usada no código:
 
 - Sensor de umidade no pino A0
 - Relé no pino 6
@@ -62,13 +50,6 @@ Abaixo está a referência de ligação usada no código:
   - D6 -> 8
   - D7 -> 7
 
-### Estrutura básica do sistema
-
-- Solo -> Sensor de umidade -> Arduino
-- Arduino -> Relé -> Bomba de água
-- Arduino -> LEDs
-- Arduino -> Display LCD
-
 ---
 
 ## 📝 Como funciona
@@ -80,20 +61,6 @@ O sistema lê a umidade do solo e compara com os limites definidos no código:
 - Normal: sistema desligado
 
 Essa lógica mantém a planta saudável e evita desperdício de água.
-
----
-
-## 📁 Estrutura do projeto
-
-```text
-Planta-inteligente/
-├── README.md
-├── planta_inteligente.ino
-├── esquematico/
-│   └── (opcional: imagens e diagramas do circuito)
-└── assets/
-    └── (opcional: fotos do projeto montado)
-```
 
 ---
 
@@ -231,15 +198,8 @@ void loop() {
 - integrar o projeto com aplicação mobile ou painel web;
 - adicionar IoT para monitoramento remoto via Wi-Fi/Bluetooth;
 - criar um modo de irrigação programada por horário;
-- adicionar sensor de temperatura e umidade do ambiente;
 - compactar o sistema em uma caixa estética e portátil;
 - implementar alertas e histórico de irrigação;
 - criar uma interface para visualizar os dados em tempo real.
 
 ---
-
-## 👩‍💻 Autor
-
-Projeto desenvolvido para automação de irrigação inteligente com foco em praticidade, sustentabilidade e monitoramento eficiente do vaso da planta.
-
-Se quiser, posso continuar e criar uma versão final mais profissional do README com badges, capa, diagrama do circuito e instruções de montagem em formato pronto para publicar no GitHub.
